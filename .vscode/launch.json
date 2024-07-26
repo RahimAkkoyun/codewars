@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "kyu1main",
+            "request": "launch",
+            "mainClass": "kyu1.kyu1main",
+            "projectName": "codewars"
+        },
+        {
+            "type": "java",
+            "name": "BenchmarkRunner",
+            "request": "launch",
+            "mainClass": "kyu8.BenchmarkRunner",
+            "projectName": "codewars"
+        },
+        {
+            "type": "java",
+            "name": "kyu8main",
+            "request": "launch",
+            "mainClass": "kyu8.kyu8main",
+            "projectName": "codewars"
+        },    
+        {
+            "name": "Run JMH",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "",
+            "preLaunchTask": "jmh"
+        }
+    ]
+}

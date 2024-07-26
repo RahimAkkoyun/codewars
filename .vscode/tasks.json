@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "jmh",
+        "type": "shell",
+        "command": "java",
+        "args": [
+          "-jar",
+          "target/codewars-1.0-SNAPSHOT.jar"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "problemMatcher": [],
+        "detail": "Runs the JMH benchmark"
+      }
+    ]
+  }
+  
