@@ -37,6 +37,14 @@
             "request": "launch",
             "mainClass": "",
             "preLaunchTask": "jmh"
+        },
+        {
+            "name": "get Assembly",    
+            "type": "node",
+            "request": "launch",
+            "preLaunchTask": "getAssembly",
+            "postDebugTask": "getAssembly",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }

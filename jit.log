@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='264207' time_ms='1722032683851'>
+<vm_version>
+<name>
+OpenJDK 64-Bit Server VM
+</name>
+<release>
+17.0.11+9-Ubuntu-1
+</release>
+<info>
+OpenJDK 64-Bit Server VM (17.0.11+9-Ubuntu-1) for linux-amd64 JRE (17.0.11+9-Ubuntu-1), built on Apr 17 2024 15:03:00 by &quot;buildd&quot; with gcc 13.2.0
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly -XX:+LogCompilation -XX:LogFile=jit.log -XX:PrintAssemblyOptions=hsdis </args>
+<command>
+kyu8.kyu8main
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=17.0.11+9-Ubuntu-1
+java.vm.name=OpenJDK 64-Bit Server VM
+jdk.debug=release
+sun.boot.library.path=/usr/lib/jvm/java-17-openjdk-amd64/lib
+java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+java.home=/usr/lib/jvm/java-17-openjdk-amd64
+java.class.path=target/classes
+jdk.boot.class.path.append=
+java.vm.info=mixed mode, sharing
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=17
+java.vm.vendor=Ubuntu
+sun.java.command=kyu8.kyu8main
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='264209'/>
+<blob name='MethodHandlesAdapterBlob' size='4224'>
+<sect index='1' size='4224' free='3842'/>
+</blob>
+<writer thread='264221'/>
+<thread_logfile thread='264221' filename='/tmp/hs_c264221_pid264207.log'/>
+<writer thread='264222'/>
+<thread_logfile thread='264222' filename='/tmp/hs_c264222_pid264207.log'/>
+<writer thread='264209'/>
+<task_queued compile_id='1' method='java.lang.Object &lt;init&gt; ()V' bytes='1' count='384' iicount='384' level='3' stamp='0.047' comment='tiered' hot_count='384'/>
+<task_queued compile_id='2' method='java.lang.String hashCode ()I' bytes='60' count='256' iicount='256' level='3' stamp='0.047' comment='tiered' hot_count='256'/>
+<writer thread='264222'/>
+<nmethod compile_id='1' compiler='c1' level='3' entry='0x000072c6994001a0' size='784' address='0x000072c699400010' relocation_offset='352' insts_offset='400' stub_offset='624' scopes_data_offset='688' scopes_pcs_offset='712' dependencies_offset='776' metadata_offset='672' method='java.lang.Object &lt;init&gt; ()V' bytes='1' count='414' iicount='414' stamp='0.047'/>
+<print_nmethod compile_id='1' compiler='c1' level='3' stamp='0.047'>
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1)      48    1       3       java.lang.Object::&lt;init&gt; (1 bytes)
+ total in heap  [0x000072c699400010,0x000072c699400320] = 784
+ relocation     [0x000072c699400170,0x000072c6994001a0] = 48
+ main code      [0x000072c6994001a0,0x000072c699400280] = 224
+ stub code      [0x000072c699400280,0x000072c6994002b0] = 48
+ metadata       [0x000072c6994002b0,0x000072c6994002c0] = 16
+ scopes data    [0x000072c6994002c0,0x000072c6994002d8] = 24
+ scopes pcs     [0x000072c6994002d8,0x000072c699400318] = 64
+ dependencies   [0x000072c699400318,0x000072c699400320] = 8
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Entry Point]
+  # {method} {0x000072c62b444c08} &apos;&lt;init&gt;&apos; &apos;()V&apos; in &apos;java/lang/Object&apos;
+  #           [sp+0x40]  (sp of caller)
+  0x000072c6994001a0:   mov    0x8(%rsi),%r10d
+  0x000072c6994001a4:   movabs $0x72c62b000000,%r11
+  0x000072c6994001ae:   add    %r11,%r10
+  0x000072c6994001b1:   cmp    %rax,%r10
+  0x000072c6994001b4:   jne    0x000072c6a08b0180           ;   {runtime_call ic_miss_stub}
+  0x000072c6994001ba:   nopw   0x0(%rax,%rax,1)
+[Verified Entry Point]
+  0x000072c6994001c0:   mov    %eax,-0x14000(%rsp)
+  0x000072c6994001c7:   push   %rbp
+  0x000072c6994001c8:   sub    $0x30,%rsp
+  0x000072c6994001cc:   movabs $0x72c62700c558,%rdi         ;   {metadata(method data for {method} {0x000072c62b444c08} &apos;&lt;init&gt;&apos; &apos;()V&apos; in &apos;java/lang/Object&apos;)}
+  0x000072c6994001d6:   mov    0xf4(%rdi),%ebx
+  0x000072c6994001dc:   add    $0x2,%ebx
+  0x000072c6994001df:   mov    %ebx,0xf4(%rdi)
+  0x000072c6994001e5:   and    $0x7fe,%ebx
+  0x000072c6994001eb:   cmp    $0x0,%ebx
+  0x000072c6994001ee:   je     0x000072c699400207           ;*return {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.Object::&lt;init&gt;@0 (line 44)
+  0x000072c6994001f4:   add    $0x30,%rsp
+  0x000072c6994001f8:   pop    %rbp
+  0x000072c6994001f9:   cmp    0x348(%r15),%rsp             ;   {poll_return}
+  0x000072c699400200:   ja     0x000072c699400225
+  0x000072c699400206:   ret    
+  0x000072c699400207:   movabs $0x72c62b444c08,%r10         ;   {metadata({method} {0x000072c62b444c08} &apos;&lt;init&gt;&apos; &apos;()V&apos; in &apos;java/lang/Object&apos;)}
+  0x000072c699400211:   mov    %r10,0x8(%rsp)
+  0x000072c699400216:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c69940021e:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.Object::&lt;init&gt;@-1 (line 44)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c699400223:   jmp    0x000072c6994001f4
+  0x000072c699400225:   movabs $0x72c6994001f9,%r10         ;   {internal_word}
+  0x000072c69940022f:   mov    %r10,0x360(%r15)
+  0x000072c699400236:   jmp    0x000072c6a08b7900           ;   {runtime_call SafepointBlob}
+  0x000072c69940023b:   nop
+  0x000072c69940023c:   nop
+  0x000072c69940023d:   mov    0x3d8(%r15),%rax
+  0x000072c699400244:   movq   $0x0,0x3d8(%r15)
+  0x000072c69940024f:   movq   $0x0,0x3e0(%r15)
+  0x000072c69940025a:   add    $0x30,%rsp
+  0x000072c69940025e:   pop    %rbp
+  0x000072c69940025f:   jmp    0x000072c6a08c5e00           ;   {runtime_call unwind_exception Runtime1 stub}
+  0x000072c699400264:   hlt    
+  0x000072c699400265:   hlt    
+  0x000072c699400266:   hlt    
+  0x000072c699400267:   hlt    
+  0x000072c699400268:   hlt    
+  0x000072c699400269:   hlt    
+  0x000072c69940026a:   hlt    
+  0x000072c69940026b:   hlt    
+  0x000072c69940026c:   hlt    
+  0x000072c69940026d:   hlt    
+  0x000072c69940026e:   hlt    
+  0x000072c69940026f:   hlt    
+  0x000072c699400270:   hlt    
+  0x000072c699400271:   hlt    
+  0x000072c699400272:   hlt    
+  0x000072c699400273:   hlt    
+  0x000072c699400274:   hlt    
+  0x000072c699400275:   hlt    
+  0x000072c699400276:   hlt    
+  0x000072c699400277:   hlt    
+  0x000072c699400278:   hlt    
+  0x000072c699400279:   hlt    
+  0x000072c69940027a:   hlt    
+  0x000072c69940027b:   hlt    
+  0x000072c69940027c:   hlt    
+  0x000072c69940027d:   hlt    
+  0x000072c69940027e:   hlt    
+  0x000072c69940027f:   hlt    
+[Exception Handler]
+  0x000072c699400280:   call   0x000072c6a0956300           ;   {no_reloc}
+  0x000072c699400285:   movabs $0x72c6b8fbb018,%rdi         ;   {external_word}
+  0x000072c69940028f:   and    $0xfffffffffffffff0,%rsp
+  0x000072c699400293:   call   0x000072c6b8b11520           ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x000072c699400298:   hlt    
+[Deopt Handler Code]
+  0x000072c699400299:   movabs $0x72c699400299,%r10         ;   {section_word}
+  0x000072c6994002a3:   push   %r10
+  0x000072c6994002a5:   jmp    0x000072c6a08b8da0           ;   {runtime_call DeoptimizationBlob}
+  0x000072c6994002aa:   hlt    
+  0x000072c6994002ab:   hlt    
+  0x000072c6994002ac:   hlt    
+  0x000072c6994002ad:   hlt    
+  0x000072c6994002ae:   hlt    
+  0x000072c6994002af:   hlt    
+--------------------------------------------------------------------------------
+[/Disassembly]
+</print_nmethod>
+<writer thread='264209'/>
+<task_queued compile_id='3' method='java.lang.String coder ()B' bytes='15' count='256' iicount='256' level='3' stamp='0.054' comment='tiered' hot_count='256'/>
+<writer thread='264222'/>
+<nmethod compile_id='2' compiler='c1' level='3' entry='0x000072c699400560' size='1952' address='0x000072c699400390' relocation_offset='352' insts_offset='464' stub_offset='1232' scopes_data_offset='1328' scopes_pcs_offset='1512' dependencies_offset='1944' metadata_offset='1312' method='java.lang.String hashCode ()I' bytes='60' count='300' iicount='300' stamp='0.055'/>
+<print_nmethod compile_id='2' compiler='c1' level='3' stamp='0.055'>
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1)      54    2       3       java.lang.String::hashCode (60 bytes)
+ total in heap  [0x000072c699400390,0x000072c699400b30] = 1952
+ relocation     [0x000072c6994004f0,0x000072c699400550] = 96
+ main code      [0x000072c699400560,0x000072c699400860] = 768
+ stub code      [0x000072c699400860,0x000072c6994008b0] = 80
+ metadata       [0x000072c6994008b0,0x000072c6994008c0] = 16
+ scopes data    [0x000072c6994008c0,0x000072c699400978] = 184
+ scopes pcs     [0x000072c699400978,0x000072c699400b28] = 432
+ dependencies   [0x000072c699400b28,0x000072c699400b30] = 8
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Entry Point]
+  # {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;
+  #           [sp+0x50]  (sp of caller)
+  0x000072c699400560:   mov    0x8(%rsi),%r10d
+  0x000072c699400564:   movabs $0x72c62b000000,%r11
+  0x000072c69940056e:   add    %r11,%r10
+  0x000072c699400571:   cmp    %rax,%r10
+  0x000072c699400574:   jne    0x000072c6a08b0180           ;   {runtime_call ic_miss_stub}
+  0x000072c69940057a:   nopw   0x0(%rax,%rax,1)
+[Verified Entry Point]
+  0x000072c699400580:   mov    %eax,-0x14000(%rsp)
+  0x000072c699400587:   push   %rbp
+  0x000072c699400588:   sub    $0x40,%rsp
+  0x000072c69940058c:   mov    %rsi,0x28(%rsp)
+  0x000072c699400591:   movabs $0x72c62700ddd8,%rdi         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c69940059b:   mov    0xf4(%rdi),%ebx
+  0x000072c6994005a1:   add    $0x2,%ebx
+  0x000072c6994005a4:   mov    %ebx,0xf4(%rdi)
+  0x000072c6994005aa:   and    $0x7fe,%ebx
+  0x000072c6994005b0:   cmp    $0x0,%ebx
+  0x000072c6994005b3:   je     0x000072c6994007da           ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@0 (line 2342)
+  0x000072c6994005b9:   mov    0xc(%rsi),%edi               ;*getfield hash {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@1 (line 2342)
+  0x000072c6994005bc:   cmp    $0x0,%edi
+  0x000072c6994005bf:   movabs $0x72c62700ddd8,%rbx         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994005c9:   movabs $0x138,%rax
+  0x000072c6994005d3:   jne    0x000072c6994005e3
+  0x000072c6994005d9:   movabs $0x148,%rax
+  0x000072c6994005e3:   mov    (%rbx,%rax,1),%rdx
+  0x000072c6994005e7:   lea    0x1(%rdx),%rdx
+  0x000072c6994005eb:   mov    %rdx,(%rbx,%rax,1)
+  0x000072c6994005ef:   jne    0x000072c6994007c4           ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@6 (line 2343)
+  0x000072c6994005f5:   movsbl 0x11(%rsi),%ebx              ;*getfield hashIsZero {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@10 (line 2343)
+  0x000072c6994005f9:   cmp    $0x0,%ebx
+  0x000072c6994005fc:   movabs $0x72c62700ddd8,%rbx         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400606:   movabs $0x158,%rax
+  0x000072c699400610:   jne    0x000072c699400620
+  0x000072c699400616:   movabs $0x168,%rax
+  0x000072c699400620:   mov    (%rbx,%rax,1),%rdx
+  0x000072c699400624:   lea    0x1(%rdx),%rdx
+  0x000072c699400628:   mov    %rdx,(%rbx,%rax,1)
+  0x000072c69940062c:   jne    0x000072c6994007c4           ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@13 (line 2343)
+  0x000072c699400632:   mov    %rsi,%rdi
+  0x000072c699400635:   movabs $0x72c62700ddd8,%rbx         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c69940063f:   addq   $0x1,0x178(%rbx)
+  0x000072c699400647:   movabs $0x72c62700e400,%rdi         ;   {metadata(method data for {method} {0x000072c62b42c250} &apos;isLatin1&apos; &apos;()Z&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400651:   mov    0xf4(%rdi),%ebx
+  0x000072c699400657:   add    $0x2,%ebx
+  0x000072c69940065a:   mov    %ebx,0xf4(%rdi)
+  0x000072c699400660:   and    $0x1ffffe,%ebx
+  0x000072c699400666:   cmp    $0x0,%ebx
+  0x000072c699400669:   je     0x000072c6994007fb
+  0x000072c69940066f:   movabs $0x72c62700e400,%rdi         ;   {metadata(method data for {method} {0x000072c62b42c250} &apos;isLatin1&apos; &apos;()Z&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400679:   incl   0x148(%rdi)                  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::isLatin1@3 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+  0x000072c69940067f:   movsbl 0x10(%rsi),%edi              ;*getfield coder {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::isLatin1@7 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+  0x000072c699400683:   cmp    $0x0,%edi
+  0x000072c699400686:   movabs $0x72c62700e400,%rdi         ;   {metadata(method data for {method} {0x000072c62b42c250} &apos;isLatin1&apos; &apos;()Z&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400690:   movabs $0x158,%rbx
+  0x000072c69940069a:   jne    0x000072c6994006aa
+  0x000072c6994006a0:   movabs $0x168,%rbx
+  0x000072c6994006aa:   mov    (%rdi,%rbx,1),%rax
+  0x000072c6994006ae:   lea    0x1(%rax),%rax
+  0x000072c6994006b2:   mov    %rax,(%rdi,%rbx,1)
+  0x000072c6994006b6:   jne    0x000072c6994006d6           ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::isLatin1@10 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+  0x000072c6994006bc:   movabs $0x72c62700e400,%rdi         ;   {metadata(method data for {method} {0x000072c62b42c250} &apos;isLatin1&apos; &apos;()Z&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994006c6:   incl   0x178(%rdi)
+  0x000072c6994006cc:   mov    $0x1,%edi
+  0x000072c6994006d1:   jmp    0x000072c6994006db           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::isLatin1@14 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+  0x000072c6994006d6:   mov    $0x0,%edi                    ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::isLatin1@18 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+  0x000072c6994006db:   and    $0x1,%edi
+  0x000072c6994006de:   cmp    $0x0,%edi
+  0x000072c6994006e1:   movabs $0x72c62700ddd8,%rdi         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994006eb:   movabs $0x1b0,%rbx
+  0x000072c6994006f5:   je     0x000072c699400705
+  0x000072c6994006fb:   movabs $0x1c0,%rbx
+  0x000072c699400705:   mov    (%rdi,%rbx,1),%rax
+  0x000072c699400709:   lea    0x1(%rax),%rax
+  0x000072c69940070d:   mov    %rax,(%rdi,%rbx,1)
+  0x000072c699400711:   je     0x000072c699400751           ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@20 (line 2344)
+  0x000072c699400717:   mov    0x14(%rsi),%edi
+  0x000072c69940071a:   shl    $0x3,%rdi                    ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@24 (line 2344)
+  0x000072c69940071e:   movabs $0x72c62700ddd8,%rbx         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400728:   addq   $0x1,0x1d0(%rbx)
+  0x000072c699400730:   mov    %rdi,%rsi                    ;*invokestatic hashCode {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@27 (line 2344)
+  0x000072c699400733:   nopl   0x0(%rax)
+  0x000072c699400737:   call   0x000072c699400865           ; ImmutableOopMap {[40]=Oop }
+                                                            ;*invokestatic hashCode {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@27 (line 2344)
+                                                            ;   {static_call}
+  0x000072c69940073c:   movabs $0x72c62700ddd8,%rsi         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400746:   incl   0x1e0(%rsi)
+  0x000072c69940074c:   jmp    0x000072c699400764           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@30 (line 2344)
+  0x000072c699400751:   mov    0x14(%rsi),%edi
+  0x000072c699400754:   shl    $0x3,%rdi                    ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@34 (line 2345)
+  0x000072c699400758:   mov    %rdi,%rsi                    ;*invokestatic hashCode {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@37 (line 2345)
+  0x000072c69940075b:   nopl   0x0(%rax)
+  0x000072c69940075f:   call   0x000072c6a08b1080           ; ImmutableOopMap {[40]=Oop }
+                                                            ;*invokestatic hashCode {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@37 (line 2345)
+                                                            ;   {static_call}
+  0x000072c699400764:   cmp    $0x0,%eax
+  0x000072c699400767:   movabs $0x72c62700ddd8,%rsi         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400771:   movabs $0x208,%rdi
+  0x000072c69940077b:   jne    0x000072c69940078b
+  0x000072c699400781:   movabs $0x218,%rdi
+  0x000072c69940078b:   mov    (%rsi,%rdi,1),%rbx
+  0x000072c69940078f:   lea    0x1(%rbx),%rbx
+  0x000072c699400793:   mov    %rbx,(%rsi,%rdi,1)
+  0x000072c699400797:   mov    0x28(%rsp),%rsi
+  0x000072c69940079c:   jne    0x000072c6994007be           ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@42 (line 2346)
+  0x000072c6994007a2:   movb   $0x1,0x11(%rsi)              ;*putfield hashIsZero {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@47 (line 2347)
+  0x000072c6994007a6:   movabs $0x72c62700ddd8,%rsi         ;   {metadata(method data for {method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994007b0:   incl   0x228(%rsi)
+  0x000072c6994007b6:   mov    %rax,%rdi
+  0x000072c6994007b9:   jmp    0x000072c6994007c4           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@50 (line 2347)
+  0x000072c6994007be:   mov    %eax,0xc(%rsi)               ;*putfield hash {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@55 (line 2349)
+  0x000072c6994007c1:   mov    %rax,%rdi                    ;*iload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::hashCode@58 (line 2352)
+  0x000072c6994007c4:   mov    %rdi,%rax
+  0x000072c6994007c7:   add    $0x40,%rsp
+  0x000072c6994007cb:   pop    %rbp
+  0x000072c6994007cc:   cmp    0x348(%r15),%rsp             ;   {poll_return}
+  0x000072c6994007d3:   ja     0x000072c69940081c
+  0x000072c6994007d9:   ret    
+  0x000072c6994007da:   movabs $0x72c62b42b070,%r10         ;   {metadata({method} {0x000072c62b42b070} &apos;hashCode&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994007e4:   mov    %r10,0x8(%rsp)
+  0x000072c6994007e9:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c6994007f1:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop [40]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.String::hashCode@-1 (line 2342)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c6994007f6:   jmp    0x000072c6994005b9
+  0x000072c6994007fb:   movabs $0x72c62b42c250,%r10         ;   {metadata({method} {0x000072c62b42c250} &apos;isLatin1&apos; &apos;()Z&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400805:   mov    %r10,0x8(%rsp)
+  0x000072c69940080a:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c699400812:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop [40]=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.String::isLatin1@-1 (line 4553)
+                                                            ; - java.lang.String::hashCode@17 (line 2344)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c699400817:   jmp    0x000072c69940066f
+  0x000072c69940081c:   movabs $0x72c6994007cc,%r10         ;   {internal_word}
+  0x000072c699400826:   mov    %r10,0x360(%r15)
+  0x000072c69940082d:   jmp    0x000072c6a08b7900           ;   {runtime_call SafepointBlob}
+  0x000072c699400832:   nop
+  0x000072c699400833:   nop
+  0x000072c699400834:   mov    0x3d8(%r15),%rax
+  0x000072c69940083b:   movq   $0x0,0x3d8(%r15)
+  0x000072c699400846:   movq   $0x0,0x3e0(%r15)
+  0x000072c699400851:   add    $0x40,%rsp
+  0x000072c699400855:   pop    %rbp
+  0x000072c699400856:   jmp    0x000072c6a08c5e00           ;   {runtime_call unwind_exception Runtime1 stub}
+  0x000072c69940085b:   hlt    
+  0x000072c69940085c:   hlt    
+  0x000072c69940085d:   hlt    
+  0x000072c69940085e:   hlt    
+  0x000072c69940085f:   hlt    
+[Stub Code]
+  0x000072c699400860:   nopl   0x0(%rax,%rax,1)             ;   {no_reloc}
+  0x000072c699400865:   movabs $0x72c62b02b6b8,%rbx         ;   {static_stub}
+  0x000072c69940086f:   jmp    0x000072c6a08b5659           ;   {runtime_call I2C/C2I adapters}
+  0x000072c699400874:   nop
+  0x000072c699400875:   movabs $0x0,%rbx                    ;   {static_stub}
+  0x000072c69940087f:   jmp    0x000072c69940087f           ;   {runtime_call}
+[Exception Handler]
+  0x000072c699400884:   call   0x000072c6a0956300           ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x000072c699400889:   movabs $0x72c6b8fbb018,%rdi         ;   {external_word}
+  0x000072c699400893:   and    $0xfffffffffffffff0,%rsp
+  0x000072c699400897:   call   0x000072c6b8b11520           ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x000072c69940089c:   hlt    
+[Deopt Handler Code]
+  0x000072c69940089d:   movabs $0x72c69940089d,%r10         ;   {section_word}
+  0x000072c6994008a7:   push   %r10
+  0x000072c6994008a9:   jmp    0x000072c6a08b8da0           ;   {runtime_call DeoptimizationBlob}
+  0x000072c6994008ae:   hlt    
+  0x000072c6994008af:   hlt    
+--------------------------------------------------------------------------------
+[/Disassembly]
+</print_nmethod>
+<writer thread='264209'/>
+<task_queued compile_id='4' method='java.lang.String length ()I' bytes='11' count='256' iicount='256' level='3' stamp='0.061' comment='tiered' hot_count='256'/>
+<writer thread='264222'/>
+<nmethod compile_id='3' compiler='c1' level='3' entry='0x000072c699400d20' size='872' address='0x000072c699400b90' relocation_offset='352' insts_offset='400' stub_offset='656' scopes_data_offset='712' scopes_pcs_offset='752' dependencies_offset='864' metadata_offset='704' method='java.lang.String coder ()B' bytes='15' count='562' iicount='562' stamp='0.061'/>
+<print_nmethod compile_id='3' compiler='c1' level='3' stamp='0.061'>
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1)      61    3       3       java.lang.String::coder (15 bytes)
+ total in heap  [0x000072c699400b90,0x000072c699400ef8] = 872
+ relocation     [0x000072c699400cf0,0x000072c699400d20] = 48
+ main code      [0x000072c699400d20,0x000072c699400e20] = 256
+ stub code      [0x000072c699400e20,0x000072c699400e50] = 48
+ metadata       [0x000072c699400e50,0x000072c699400e58] = 8
+ scopes data    [0x000072c699400e58,0x000072c699400e80] = 40
+ scopes pcs     [0x000072c699400e80,0x000072c699400ef0] = 112
+ dependencies   [0x000072c699400ef0,0x000072c699400ef8] = 8
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Entry Point]
+  # {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;
+  #           [sp+0x40]  (sp of caller)
+  0x000072c699400d20:   mov    0x8(%rsi),%r10d
+  0x000072c699400d24:   movabs $0x72c62b000000,%r11
+  0x000072c699400d2e:   add    %r11,%r10
+  0x000072c699400d31:   cmp    %rax,%r10
+  0x000072c699400d34:   jne    0x000072c6a08b0180           ;   {runtime_call ic_miss_stub}
+  0x000072c699400d3a:   nopw   0x0(%rax,%rax,1)
+[Verified Entry Point]
+  0x000072c699400d40:   mov    %eax,-0x14000(%rsp)
+  0x000072c699400d47:   push   %rbp
+  0x000072c699400d48:   sub    $0x30,%rsp
+  0x000072c699400d4c:   movabs $0x72c6270114f8,%rax         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400d56:   mov    0xf4(%rax),%edi
+  0x000072c699400d5c:   add    $0x2,%edi
+  0x000072c699400d5f:   mov    %edi,0xf4(%rax)
+  0x000072c699400d65:   and    $0x7fe,%edi
+  0x000072c699400d6b:   cmp    $0x0,%edi
+  0x000072c699400d6e:   je     0x000072c699400db1           ;*getstatic COMPACT_STRINGS {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@0 (line 4545)
+  0x000072c699400d74:   movabs $0x72c6270114f8,%rax         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400d7e:   incl   0x148(%rax)                  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@3 (line 4545)
+  0x000072c699400d84:   movsbl 0x10(%rsi),%eax              ;*getfield coder {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@7 (line 4545)
+  0x000072c699400d88:   movabs $0x72c6270114f8,%rsi         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400d92:   incl   0x158(%rsi)                  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@10 (line 4545)
+  0x000072c699400d98:   shl    $0x18,%eax
+  0x000072c699400d9b:   sar    $0x18,%eax
+  0x000072c699400d9e:   add    $0x30,%rsp
+  0x000072c699400da2:   pop    %rbp
+  0x000072c699400da3:   cmp    0x348(%r15),%rsp             ;   {poll_return}
+  0x000072c699400daa:   ja     0x000072c699400dcf
+  0x000072c699400db0:   ret    
+  0x000072c699400db1:   movabs $0x72c62b42b6a0,%r10         ;   {metadata({method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699400dbb:   mov    %r10,0x8(%rsp)
+  0x000072c699400dc0:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c699400dc8:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.String::coder@-1 (line 4545)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c699400dcd:   jmp    0x000072c699400d74
+  0x000072c699400dcf:   movabs $0x72c699400da3,%r10         ;   {internal_word}
+  0x000072c699400dd9:   mov    %r10,0x360(%r15)
+  0x000072c699400de0:   jmp    0x000072c6a08b7900           ;   {runtime_call SafepointBlob}
+  0x000072c699400de5:   nop
+  0x000072c699400de6:   nop
+  0x000072c699400de7:   mov    0x3d8(%r15),%rax
+  0x000072c699400dee:   movq   $0x0,0x3d8(%r15)
+  0x000072c699400df9:   movq   $0x0,0x3e0(%r15)
+  0x000072c699400e04:   add    $0x30,%rsp
+  0x000072c699400e08:   pop    %rbp
+  0x000072c699400e09:   jmp    0x000072c6a08c5e00           ;   {runtime_call unwind_exception Runtime1 stub}
+  0x000072c699400e0e:   hlt    
+  0x000072c699400e0f:   hlt    
+  0x000072c699400e10:   hlt    
+  0x000072c699400e11:   hlt    
+  0x000072c699400e12:   hlt    
+  0x000072c699400e13:   hlt    
+  0x000072c699400e14:   hlt    
+  0x000072c699400e15:   hlt    
+  0x000072c699400e16:   hlt    
+  0x000072c699400e17:   hlt    
+  0x000072c699400e18:   hlt    
+  0x000072c699400e19:   hlt    
+  0x000072c699400e1a:   hlt    
+  0x000072c699400e1b:   hlt    
+  0x000072c699400e1c:   hlt    
+  0x000072c699400e1d:   hlt    
+  0x000072c699400e1e:   hlt    
+  0x000072c699400e1f:   hlt    
+[Exception Handler]
+  0x000072c699400e20:   call   0x000072c6a0956300           ;   {no_reloc}
+  0x000072c699400e25:   movabs $0x72c6b8fbb018,%rdi         ;   {external_word}
+  0x000072c699400e2f:   and    $0xfffffffffffffff0,%rsp
+  0x000072c699400e33:   call   0x000072c6b8b11520           ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x000072c699400e38:   hlt    
+[Deopt Handler Code]
+  0x000072c699400e39:   movabs $0x72c699400e39,%r10         ;   {section_word}
+  0x000072c699400e43:   push   %r10
+  0x000072c699400e45:   jmp    0x000072c6a08b8da0           ;   {runtime_call DeoptimizationBlob}
+  0x000072c699400e4a:   hlt    
+  0x000072c699400e4b:   hlt    
+  0x000072c699400e4c:   hlt    
+  0x000072c699400e4d:   hlt    
+  0x000072c699400e4e:   hlt    
+  0x000072c699400e4f:   hlt    
+--------------------------------------------------------------------------------
+[/Disassembly]
+</print_nmethod>
+<writer thread='264209'/>
+<task_queued compile_id='5' method='java.lang.String isLatin1 ()Z' bytes='19' count='313' iicount='313' level='3' stamp='0.064' comment='tiered' hot_count='313'/>
+<writer thread='264222'/>
+<nmethod compile_id='4' compiler='c1' level='3' entry='0x000072c6994010c0' size='1128' address='0x000072c699400f10' relocation_offset='352' insts_offset='432' stub_offset='784' scopes_data_offset='848' scopes_pcs_offset='928' dependencies_offset='1104' nul_chk_table_offset='1112' metadata_offset='832' method='java.lang.String length ()I' bytes='11' count='375' iicount='375' stamp='0.064'/>
+<print_nmethod compile_id='4' compiler='c1' level='3' stamp='0.064'>
+
+============================= C1-compiled nmethod ==============================
+----------------------------------- Assembly -----------------------------------
+
+Compiled method (c1)      64    4       3       java.lang.String::length (11 bytes)
+ total in heap  [0x000072c699400f10,0x000072c699401378] = 1128
+ relocation     [0x000072c699401070,0x000072c6994010a8] = 56
+ main code      [0x000072c6994010c0,0x000072c699401220] = 352
+ stub code      [0x000072c699401220,0x000072c699401250] = 48
+ metadata       [0x000072c699401250,0x000072c699401260] = 16
+ scopes data    [0x000072c699401260,0x000072c6994012b0] = 80
+ scopes pcs     [0x000072c6994012b0,0x000072c699401360] = 176
+ dependencies   [0x000072c699401360,0x000072c699401368] = 8
+ nul chk table  [0x000072c699401368,0x000072c699401378] = 16
+
+[Disassembly]
+--------------------------------------------------------------------------------
+[Constant Pool (empty)]
+
+--------------------------------------------------------------------------------
+
+[Entry Point]
+  # {method} {0x000072c62b42a798} &apos;length&apos; &apos;()I&apos; in &apos;java/lang/String&apos;
+  #           [sp+0x40]  (sp of caller)
+  0x000072c6994010c0:   mov    0x8(%rsi),%r10d
+  0x000072c6994010c4:   movabs $0x72c62b000000,%r11
+  0x000072c6994010ce:   add    %r11,%r10
+  0x000072c6994010d1:   cmp    %rax,%r10
+  0x000072c6994010d4:   jne    0x000072c6a08b0180           ;   {runtime_call ic_miss_stub}
+  0x000072c6994010da:   nopw   0x0(%rax,%rax,1)
+[Verified Entry Point]
+  0x000072c6994010e0:   mov    %eax,-0x14000(%rsp)
+  0x000072c6994010e7:   push   %rbp
+  0x000072c6994010e8:   sub    $0x30,%rsp
+  0x000072c6994010ec:   movabs $0x72c6270119a8,%rcx         ;   {metadata(method data for {method} {0x000072c62b42a798} &apos;length&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994010f6:   mov    0xf4(%rcx),%eax
+  0x000072c6994010fc:   add    $0x2,%eax
+  0x000072c6994010ff:   mov    %eax,0xf4(%rcx)
+  0x000072c699401105:   and    $0x7fe,%eax
+  0x000072c69940110b:   cmp    $0x0,%eax
+  0x000072c69940110e:   je     0x000072c69940119a           ;*aload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::length@0 (line 1481)
+  0x000072c699401114:   mov    0x14(%rsi),%ecx
+  0x000072c699401117:   shl    $0x3,%rcx                    ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::length@1 (line 1481)
+  0x000072c69940111b:   mov    0xc(%rcx),%eax               ; implicit exception: dispatches to 0x000072c6994011bb
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::length@4 (line 1481)
+  0x000072c69940111e:   mov    %rsi,%rcx
+  0x000072c699401121:   movabs $0x72c6270119a8,%rdi         ;   {metadata(method data for {method} {0x000072c62b42a798} &apos;length&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c69940112b:   addq   $0x1,0x138(%rdi)
+  0x000072c699401133:   movabs $0x72c6270114f8,%rcx         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c69940113d:   mov    0xf4(%rcx),%edi
+  0x000072c699401143:   add    $0x2,%edi
+  0x000072c699401146:   mov    %edi,0xf4(%rcx)
+  0x000072c69940114c:   and    $0x1ffffe,%edi
+  0x000072c699401152:   cmp    $0x0,%edi
+  0x000072c699401155:   je     0x000072c6994011c0
+  0x000072c69940115b:   movabs $0x72c6270114f8,%rcx         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699401165:   incl   0x148(%rcx)                  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@3 (line 4545)
+                                                            ; - java.lang.String::length@6 (line 1481)
+  0x000072c69940116b:   movsbl 0x10(%rsi),%ecx              ;*getfield coder {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@7 (line 4545)
+                                                            ; - java.lang.String::length@6 (line 1481)
+  0x000072c69940116f:   movabs $0x72c6270114f8,%rsi         ;   {metadata(method data for {method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c699401179:   incl   0x158(%rsi)                  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::coder@10 (line 4545)
+                                                            ; - java.lang.String::length@6 (line 1481)
+  0x000072c69940117f:   shl    $0x18,%ecx
+  0x000072c699401182:   sar    $0x18,%ecx
+  0x000072c699401185:   sar    %cl,%eax
+  0x000072c699401187:   add    $0x30,%rsp
+  0x000072c69940118b:   pop    %rbp
+  0x000072c69940118c:   cmp    0x348(%r15),%rsp             ;   {poll_return}
+  0x000072c699401193:   ja     0x000072c6994011e1
+  0x000072c699401199:   ret    
+  0x000072c69940119a:   movabs $0x72c62b42a798,%r10         ;   {metadata({method} {0x000072c62b42a798} &apos;length&apos; &apos;()I&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994011a4:   mov    %r10,0x8(%rsp)
+  0x000072c6994011a9:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c6994011b1:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.String::length@-1 (line 1481)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c6994011b6:   jmp    0x000072c699401114
+  0x000072c6994011bb:   call   0x000072c6a0954120           ; ImmutableOopMap {rsi=Oop }
+                                                            ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - java.lang.String::length@4 (line 1481)
+                                                            ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x000072c6994011c0:   movabs $0x72c62b42b6a0,%r10         ;   {metadata({method} {0x000072c62b42b6a0} &apos;coder&apos; &apos;()B&apos; in &apos;java/lang/String&apos;)}
+  0x000072c6994011ca:   mov    %r10,0x8(%rsp)
+  0x000072c6994011cf:   movq   $0xffffffffffffffff,(%rsp)
+  0x000072c6994011d7:   call   0x000072c6a095a280           ; ImmutableOopMap {rsi=Oop }
+                                                            ;*synchronization entry
+                                                            ; - java.lang.String::coder@-1 (line 4545)
+                                                            ; - java.lang.String::length@6 (line 1481)
+                                                            ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000072c6994011dc:   jmp    0x000072c69940115b
+  0x000072c6994011e1:   movabs $0x72c69940118c,%r10         ;   {internal_word}
+  0x000072c6994011eb:   mov    %r10,0x360(%r15)
+  0x000072c6994011f2:   jmp    0x000072c6a08b7900           ;   {runtime_call SafepointBlob}
+  0x000072c6994011f7:   nop
+  0x000072c6994011f8:   nop
+  0x000072c6994011f9:   mov    0x3d8(%r15),%rax
+  0x000072c699401200:   movq   $0x0,0x3d8(%r15)
+  0x000072c69940120b:   movq   $0x0,0x3e0(%r15)
+  0x000072c699401216:   add    $0x30,%rsp
+  0x000072c69940121a:   pop    %rbp
+  0x000072c69940121b:   jmp    0x000072c6a08c5e00           ;   {runtime_call unwind_exception Runtime1 stub}
+[Exception Handler]
+  0x000072c699401220:   call   0x000072c6a0956300           ;   {no_reloc}
+  0x000072c699401225:   movabs $0x72c6b8fbb018,%rdi         ;   {external_word}
+  0x000072c69940122f:   and    $0xfffffffffffffff0,%rsp
+  0x000072c699401233:   call   0x000072c6b8b11520           ;   {runtime_call MacroAssembler::debug64(char*, long, long*)}
+  0x000072c699401238:   hlt    
+[Deopt Handler Code]
+  0x000072c699401239:   movabs $0x72c699401239,%r10         ;   {section_word}
+  0x000072c699401243:   push   %r10
+  0x000072c699401245:   jmp    0x000072c6a08b8da0           ;   {runtime_call DeoptimizationBlob}
+  0x000072c69940124a:   hlt    
+  0x000072c69940124b:   hlt    
+  0x000072c69940124c:   hlt    
+  0x000072c69940124d:   hlt    
+  0x000072c69940124e:   hlt    
+  0x000072c69940124f:   hlt    
+--------------------------------------------------------------------------------
+[/Disassembly]
+</print_nmethod>
+<writer thread='264215'/>
+<destroy_vm stamp='0.067'/>
+<tty_done stamp='0.068'/>
+</tty>
+<compilation_log thread='264222'>
+<start_compile_thread name='C1 CompilerThread0' thread='264222' process='264207' stamp='0.043'/>
+<task compile_id='1' method='java.lang.Object &lt;init&gt; ()V' bytes='1' count='405' iicount='405' level='3' stamp='0.047'>
+<phase name='setup' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='buildIR' stamp='0.047'>
+<type id='1114' name='void'/>
+<klass id='1119' name='java.lang.Object' flags='1'/>
+<method id='1249' holder='1119' name='&lt;init&gt;' return='1114' flags='1' bytes='1' iicount='405'/>
+<parse method='1249'  stamp='0.047'>
+<phase name='parse_hir' stamp='0.047'>
+<bc code='177' bci='0'/>
+<dependency type='no_finalizable_subclasses' ctxk='1119'/>
+<phase_done stamp='0.047'/>
+</phase>
+<parse_done stamp='0.047'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='gvn' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='emit_lir' stamp='0.047'>
+<phase name='lirGeneration' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='linearScan' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='codeemit' stamp='0.047'>
+<phase_done stamp='0.047'/>
+</phase>
+<phase name='codeinstall' stamp='0.047'>
+<dependency type='no_finalizable_subclasses' ctxk='1119'/>
+<phase_done stamp='0.047'/>
+</phase>
+<code_cache total_blobs='280' nmethods='1' adapters='194' free_code_cache='250601216'/>
+<task_done success='1' nmsize='272' count='422' stamp='0.054'/>
+</task>
+<task compile_id='2' method='java.lang.String hashCode ()I' bytes='60' count='298' iicount='298' level='3' stamp='0.054'>
+<phase name='setup' stamp='0.054'>
+<phase_done stamp='0.054'/>
+</phase>
+<phase name='buildIR' stamp='0.054'>
+<type id='1112' name='int'/>
+<klass id='1120' name='java.lang.String' flags='17'/>
+<method id='1249' holder='1120' name='hashCode' return='1112' flags='1' bytes='60' iicount='298'/>
+<parse method='1249'  stamp='0.054'>
+<phase name='parse_hir' stamp='0.054'>
+<bc code='182' bci='17'/>
+<type id='1106' name='boolean'/>
+<method id='1251' holder='1120' name='isLatin1' return='1106' flags='0' bytes='19' iicount='185'/>
+<call method='1251' instr='invokevirtual'/>
+<inline_success reason='inline'/>
+<parse method='1251'>
+<parse_done stamp='0.054'/>
+</parse>
+<bc code='184' bci='27'/>
+<klass id='1241' name='[B' flags='1041'/>
+<klass id='1254' name='java.lang.StringLatin1' flags='16'/>
+<method id='1255' holder='1254' name='hashCode' return='1112' arguments='1241' flags='9' bytes='42' iicount='30'/>
+<call method='1255' instr='invokestatic'/>
+<inline_fail reason='callee is too large'/>
+<bc code='184' bci='37'/>
+<klass id='1257' name='java.lang.StringUTF16' unloaded='1'/>
+<method id='1258' holder='1257' name='hashCode' return='1112' arguments='1241' unloaded='1'/>
+<call method='1258' instr='invokestatic'/>
+<inline_fail reason='not inlineable'/>
+<phase_done stamp='0.054'/>
+</phase>
+<parse_done stamp='0.054'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.054'>
+<phase_done stamp='0.054'/>
+</phase>
+<phase name='gvn' stamp='0.054'>
+<phase_done stamp='0.054'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.054'>
+<phase_done stamp='0.054'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.054'>
+<phase_done stamp='0.054'/>
+</phase>
+<phase_done stamp='0.054'/>
+</phase>
+<phase name='emit_lir' stamp='0.054'>
+<phase name='lirGeneration' stamp='0.054'>
+<phase_done stamp='0.055'/>
+</phase>
+<phase name='linearScan' stamp='0.055'>
+<phase_done stamp='0.055'/>
+</phase>
+<phase_done stamp='0.055'/>
+</phase>
+<phase name='codeemit' stamp='0.055'>
+<phase_done stamp='0.055'/>
+</phase>
+<phase name='codeinstall' stamp='0.055'>
+<phase_done stamp='0.055'/>
+</phase>
+<code_cache total_blobs='282' nmethods='2' adapters='195' free_code_cache='250598400'/>
+<task_done success='1' nmsize='848' count='314' inlined_bytes='19' stamp='0.061'/>
+</task>
+<task compile_id='3' method='java.lang.String coder ()B' bytes='15' count='425' iicount='425' level='3' stamp='0.061'>
+<phase name='setup' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='buildIR' stamp='0.061'>
+<type id='1110' name='byte'/>
+<klass id='1120' name='java.lang.String' flags='17'/>
+<method id='1249' holder='1120' name='coder' return='1110' flags='0' bytes='15' iicount='430'/>
+<parse method='1249'  stamp='0.061'>
+<phase name='parse_hir' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<parse_done stamp='0.061'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='gvn' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='emit_lir' stamp='0.061'>
+<phase name='lirGeneration' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='linearScan' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='codeemit' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<phase name='codeinstall' stamp='0.061'>
+<phase_done stamp='0.061'/>
+</phase>
+<code_cache total_blobs='283' nmethods='3' adapters='195' free_code_cache='250597504'/>
+<task_done success='1' nmsize='304' count='615' stamp='0.064'/>
+</task>
+<task compile_id='4' method='java.lang.String length ()I' bytes='11' count='367' iicount='367' level='3' stamp='0.064'>
+<phase name='setup' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='buildIR' stamp='0.064'>
+<type id='1112' name='int'/>
+<klass id='1120' name='java.lang.String' flags='17'/>
+<method id='1249' holder='1120' name='length' return='1112' flags='1' bytes='11' iicount='368'/>
+<parse method='1249'  stamp='0.064'>
+<phase name='parse_hir' stamp='0.064'>
+<bc code='182' bci='6'/>
+<type id='1110' name='byte'/>
+<method id='1251' holder='1120' name='coder' return='1110' flags='0' bytes='15' compile_id='3' compiler='c1' level='3' iicount='617'/>
+<call method='1251' instr='invokevirtual'/>
+<inline_success reason='inline'/>
+<parse method='1251'>
+<parse_done stamp='0.064'/>
+</parse>
+<phase_done stamp='0.064'/>
+</phase>
+<parse_done stamp='0.064'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='gvn' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='emit_lir' stamp='0.064'>
+<phase name='lirGeneration' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='linearScan' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='codeemit' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<phase name='codeinstall' stamp='0.064'>
+<phase_done stamp='0.064'/>
+</phase>
+<code_cache total_blobs='284' nmethods='4' adapters='195' free_code_cache='250596352'/>
+<task_done success='1' nmsize='400' count='399' inlined_bytes='15' stamp='0.067'/>
+</task>
+<fragment>
+<![CDATA[
+<task compile_id='5' method='java.lang.String isLatin1 ()Z' bytes='19' count='341' iicount='341' level='3' stamp='0.067'>
+]]>
+</fragment>
+</compilation_log>
+<compilation_log thread='264221'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C2 CompilerThread0' thread='264221' process='264207' stamp='0.043'/>
+]]>
+</fragment>
+</compilation_log>
+<hotspot_log_done stamp='0.069'/>
+</hotspot_log>

@@ -15,7 +15,33 @@
         },
         "problemMatcher": [],
         "detail": "Runs the JMH benchmark"
-      }
+      },
+      {
+        "label": "getAssembly",
+        "type": "shell",
+        "command": "java",
+        "args": [
+            "-XX:+UnlockDiagnosticVMOptions",
+            "-XX:+PrintAssembly",
+            "-XX:+LogCompilation",
+            "-XX:LogFile=jit.log",
+            "-XX:PrintAssemblyOptions=hsdis",
+            "-cp",
+            "target/classes",
+            "kyu8.kyu8main"
+        ],
+        "options": {
+            "shell": {
+                "args": ["-c"]
+            }
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": false
+        },
+        "problemMatcher": [],
+        "detail": "gets Assembly output"
+    }
     ]
   }
   
