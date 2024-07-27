@@ -11,6 +11,7 @@ public class BenchmarkRunner {
             .include(playground1benchmark.class.getSimpleName())
             .forks(1)
             .threads(4)
+            .output("testCount.txt")
             .build();
         
         new Runner(opt).run();
