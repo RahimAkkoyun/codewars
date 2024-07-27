@@ -6,5 +6,13 @@ public class playground1methods {
     {
         System.out.println("Hello World!");
     }
+
+    public void count()
+    {
+        for(int i = 0; i<1000000;i++)
+        {
+            
+        }
+    }
     
 }

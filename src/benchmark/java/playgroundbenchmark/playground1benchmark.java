@@ -221,8 +221,8 @@ public class playground1benchmark
     }
 
     @Benchmark
-    public void testhelloWorld()
+    public void testCount()
     {
-        utility.helloWorld();
+        utility.count();
     }
 }
