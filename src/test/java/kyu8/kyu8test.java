@@ -16,6 +16,10 @@ import java.util.stream.DoubleStream;
 
 public class kyu8test {
 
+    // Declare Classes
+
+    kyu8exercises utility;
+
     // Declare primitive data types
     private static boolean booleanValue;
     private static char charValue;
@@ -50,6 +54,8 @@ public class kyu8test {
 
     @BeforeEach
     public void setUp() {
+
+        utility = new kyu8exercises();
         Random random = new Random();
 
         // Initialize primitive data types
@@ -222,14 +228,14 @@ public class kyu8test {
         public void testStringToArray_case1() {
             String input = "Hello World";
             String[] expectedOutput = {"Hello", "World"};
-            assertArrayEquals(expectedOutput, kyu8exercises.stringToArray(input));
+            assertArrayEquals(expectedOutput, utility.stringToArray(input));
         }
 
         @Test
         public void testStringToArray_case2() {
             String input = "JUnit 5 is great";
             String[] expectedOutput = {"JUnit", "5", "is", "great"};
-            assertArrayEquals(expectedOutput, kyu8exercises.stringToArray(input));
+            assertArrayEquals(expectedOutput, utility.stringToArray(input));
         }
     }
 }

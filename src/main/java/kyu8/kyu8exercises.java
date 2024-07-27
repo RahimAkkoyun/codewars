@@ -9,7 +9,7 @@ public class kyu8exercises
      * "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
      */
 
-     public static String[] stringToArray(String s) 
+     public String[] stringToArray(String s) 
      {
         return s.split("\s");
     }

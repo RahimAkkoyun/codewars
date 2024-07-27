@@ -1,7 +1,8 @@
-package playground;
+package playgroundbenchmark;
 
 import java.util.*;
 import java.util.stream.*;
+import playgroundmain.playground1methods;
 
 import org.openjdk.jmh.*;
 import org.openjdk.jmh.annotations.*;
@@ -14,6 +15,10 @@ import org.openjdk.jmh.annotations.*;
 @Fork(1)
 public class playground1benchmark
 {
+    // Declare Classes
+
+    playground1methods utility;
+
     // Declare primitive data types
     private static boolean booleanValue;
     private static char charValue;
@@ -49,6 +54,7 @@ public class playground1benchmark
 
     @Setup(Level.Trial)
     public void setUp() {
+        utility = new playground1methods();
         Random random = new Random();
 
         // Initialize primitive data types
@@ -214,4 +220,9 @@ public class playground1benchmark
         return list;
     }
 
+    @Benchmark
+    public void testhelloWorld()
+    {
+        utility.helloWorld();
+    }
 }

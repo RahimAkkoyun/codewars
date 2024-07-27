@@ -6,6 +6,8 @@ import java.util.stream.*;
 import org.openjdk.jmh.*;
 import org.openjdk.jmh.annotations.*;
 
+import playgroundmain.playground1methods;
+
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)
@@ -14,6 +16,10 @@ import org.openjdk.jmh.annotations.*;
 @Fork(1)
 public class kyu8benchmark
 {
+    // Declare Classes
+
+    kyu8exercises utility;
+
     // Declare primitive data types
     private static boolean booleanValue;
     private static char charValue;
@@ -51,6 +57,8 @@ public class kyu8benchmark
     public void setUp() {
         Random random = new Random();
 
+        utility = new kyu8exercises();
+
         // Initialize primitive data types
         booleanValue = random.nextBoolean();
         charValue = (char) (random.nextInt(26) + 'a');
@@ -85,10 +93,6 @@ public class kyu8benchmark
         randomStringList = Arrays.asList(randomStringArray);
     }
 
-    @Benchmark
-    public void testStringToArray() {
-        kyu8exercises.stringToArray(stringValue);
-    }
 
     private static String[] generateRandomStringArray(int size) {
         Random random = new Random();
