@@ -1,4 +1,11 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "terminal.integrated.persistentSessionReviveProcess": "onExit",
+    "terminal.integrated.enablePersistentSessions": true,   
+        "terminal.integrated.env.windows": 
+        {
+            "PATH": "C:\\Program Files\\Microsoft\\jdk-17.0.11.9-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\scripts;C:\\Program Files\\Git\\cmd;C:\\maven\\bin;C:\\maven\\bin;C:\\Users\\servertwo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\Python312\\Scripts\\;C:\\Program Files\\Python312\\;C:\\scripts;${env:PATH}"
+        }
+    
 }
