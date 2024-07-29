@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "kyu5main",
+            "request": "launch",
+            "mainClass": "kyu5.kyu5main",
+            "projectName": "codewars"
+        },
+        {
             "name": "Run JMH",
             "type": "java",
             "request": "launch",
@@ -12,7 +19,7 @@
             "preLaunchTask": "jmh"
         },
         {
-            "name": "get Assembly",    
+            "name": "get Assembly",
             "type": "node",
             "request": "launch",
             "preLaunchTask": "getAssembly",

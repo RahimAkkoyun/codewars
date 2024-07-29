@@ -10,7 +10,7 @@ public class BenchmarkRunner {
         Options opt = new OptionsBuilder()
             .include(playground1benchmark.class.getSimpleName())
             .forks(1)
-            .threads(4)
+            .threads(8)
             .output("testCount2.txt")
             .build();
         

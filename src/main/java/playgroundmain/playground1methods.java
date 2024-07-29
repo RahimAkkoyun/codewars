@@ -9,7 +9,7 @@ public class playground1methods {
 
     public void count()
     {
-        for(int i = 0; i<1000000;i++)
+        for(int i = 0; i<Integer.MAX_VALUE;i++)
         {
             
         }
