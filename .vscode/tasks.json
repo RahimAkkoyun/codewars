@@ -9,12 +9,6 @@
           "-jar",
           "target/codewars-1.0-SNAPSHOT.jar"
         ],
-        "group": {
-          "kind": "build",
-          "isDefault": false
-        },
-        "problemMatcher": [],
-        "detail": "Runs the JMH benchmark"
       },
       {
         "label": "getAssembly",
@@ -29,18 +23,7 @@
             "-cp",
             "target/classes",
             "kyu8.kyu8main"
-        ],
-        "options": {
-            "shell": {
-                "args": ["-c"]
-            }
-        },
-        "group": {
-            "kind": "build",
-            "isDefault": false
-        },
-        "problemMatcher": [],
-        "detail": "gets Assembly output"
+        ]
     }
     ]
   }

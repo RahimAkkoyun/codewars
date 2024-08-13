@@ -20,7 +20,7 @@
         },
         {
             "name": "get Assembly",
-            "type": "node",
+            "type": "java",
             "request": "launch",
             "preLaunchTask": "getAssembly",
             "postDebugTask": "getAssembly",
